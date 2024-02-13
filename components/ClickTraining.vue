@@ -58,7 +58,7 @@
 
 <script lang="ts" setup>
 const animals = [
-    { x: 0, y: 200, name: 'kaba', order: 2, clicked: false },
+    { x: 0, y: 200, name: 'Bell_Demo_CSS_only', order: 2, clicked: false },
     { x: 200, y: 400, name: 'saru', order: 4, clicked: false },
     { x: 400, y: 200, name: 'tora', order: 3, clicked: false },
     { x: 600, y: 300, name: 'zou', order: 1, clicked: false },
