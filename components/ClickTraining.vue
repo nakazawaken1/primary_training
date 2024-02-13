@@ -25,10 +25,10 @@
                 fill="white" />
         </svg>
         <Animal v-for="animal of animals" :key="animal.order" :x="animal.x" :y="animal.y" :clicked="animal.clicked"><img class="clickable"
-                :src="`/images/${animal.name}.svg`" :alt="animal.name" @click="click(animal)" /></Animal>
+                :src="svg(animal.name)" :alt="animal.name" @click="click(animal)" /></Animal>
     </section>
     <section v-else @click="stage = 'start'" class="clickable">
-        <img v-if="stage == 'clear'" class="clear" src="/images/clear.svg" alt="clear" />
+        <img v-if="stage == 'clear'" class="clear" :src="svg('clear')" alt="clear" />
         <svg v-else class="gameover" width="573" height="73" viewBox="0 0 573 73" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <mask id="path-1-outside-1_7_1111" maskUnits="userSpaceOnUse" x="-16" y="-16" width="605" height="105"
@@ -45,7 +45,7 @@
                 fill="white" mask="url(#path-1-outside-1_7_1111)" />
         </svg>
         <footer>
-            <img v-for="animal of sorted" :key="animal.order" :src="`/images/${animal.name}.svg`" :alt="animal.name" />
+            <img v-for="animal of sorted" :key="animal.order" :src="svg(animal.name)" :alt="animal.name" />
         </footer>
         <svg width="400" height="80" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="400" height="80" rx="10" fill="#4EBAC1" />
@@ -70,6 +70,8 @@ const scoreCurrent = useState('scoreCurrent', () => scoreMax);
 const lifeMax = 3;
 const lifeCurrent = useState('lifeCurrent', () => lifeMax);
 const sorted = computed(() => [...animals].sort((a, b) => a.order - b.order));
+const config = useRuntimeConfig();
+const svg = (name:string) => `${config.app.baseURL}images/${name}.svg`;
 
 const click = (animal) => {
     if (sorted.value.find(i => i == animal)?.clicked === true) return;
