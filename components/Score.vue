@@ -22,11 +22,11 @@ nav {
     padding: 0 10px;
 
     strong {
-        font-size: 100px;
+        font-size: 60px;
     }
 
     span {
-        font-size: 70px;
+        font-size: 30px;
     }
 }
 </style>

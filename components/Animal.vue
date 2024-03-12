@@ -1,5 +1,5 @@
 <template>
-    <div :style="{'--x': x + 'px', '--y': y + 'px', 'opacity': clicked ? 0.5 : 1}" @click.stop="click"><slot /></div>
+    <div :style="{'--x': x + 'px', '--y': y + 'px', 'opacity': clicked ? 0.5 : 1}" @click.stop="emits('click')"><slot /></div>
 </template>
 
 <script lang="ts" setup>

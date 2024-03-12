@@ -17,9 +17,3 @@ const props = withDefaults(defineProps<{
 })
 const lifes = computed(() => new Array(props.max).fill(true).concat(new Array(props.current).fill(false)).slice(-props.max))
 </script>
-
-<style lang="scss" scoped>
-svg {
-    margin-bottom: 20px;
-}
-</style>

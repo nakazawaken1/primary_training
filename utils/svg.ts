@@ -1,0 +1,1 @@
+export const svg = (name:string) => `${useRuntimeConfig().app.baseURL}images/${name}.svg`;
