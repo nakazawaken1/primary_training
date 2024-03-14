@@ -8,8 +8,8 @@
 <script lang="ts" setup>
 const props = withDefaults(defineProps<{
   hover: boolean,
-  width: number,
-  height: number,
+  width?: number,
+  height?: number,
 }>(), {
   hover: false,
   width: 400,

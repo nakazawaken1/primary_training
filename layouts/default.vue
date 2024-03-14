@@ -22,6 +22,49 @@ section,
 div {
   position: relative;
 }
+
+@keyframes step1 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  50% {
+    opacity: 0;
+    display: none;
+  }
+  51% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+@keyframes step2 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  49% {
+    opacity: 0;
+    display: none;
+  }
+  50% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+.frame1 {
+  animation: step1 2s infinite;
+}
+.frame2 {
+  animation: step2 2s infinite reverse;
+}
 </style>
 
 <style lang="scss">
