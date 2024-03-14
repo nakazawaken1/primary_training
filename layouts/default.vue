@@ -16,6 +16,7 @@ body {
 * {
   box-sizing: border-box;
   font-family: "M PLUS 1", sans-serif;
+  user-select: none;
 }
 
 section,
